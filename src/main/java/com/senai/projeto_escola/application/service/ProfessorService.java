@@ -1,11 +1,8 @@
 package com.senai.projeto_escola.application.service;
-
-import com.senai.projeto_escola.Domain.Entity.Aluno;
 import com.senai.projeto_escola.Domain.Entity.Professor;
 import com.senai.projeto_escola.Domain.Repository.ProfessorRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
 
