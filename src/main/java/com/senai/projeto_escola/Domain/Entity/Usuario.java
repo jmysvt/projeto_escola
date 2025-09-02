@@ -7,7 +7,7 @@ import lombok.Data;
 
 @Entity
 @Data
-public class Usuario {
+public abstract class Usuario {
 
     @NotBlank(message = "O campo nome não pode estar vazio")
     @Column(nullable = false, length = 100)
@@ -17,7 +17,7 @@ public class Usuario {
     @Column(nullable = false, length = 25)
     private int cpf;
 
-    @NotBlank(message = "O campo turmas não pode estar vazio")
+    @NotBlank(message = "O campo tipo de usuário não pode estar vazio")
     @Column(nullable = false, length = 25)
     private String tipo;
 
