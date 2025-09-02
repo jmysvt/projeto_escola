@@ -28,7 +28,7 @@ public class Professor extends Usuario {
 
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
-    private List<String> id;
+    private String id;
 
 
 
