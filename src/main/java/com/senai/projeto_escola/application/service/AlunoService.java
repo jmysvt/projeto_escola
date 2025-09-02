@@ -18,7 +18,7 @@ public class AlunoService {
         return alunoRepository.findAll();
     }
 
-    public Aluno bucarAlunoPorId (String id){
+    public Aluno buscarAlunoPorId (String id){
         return alunoRepository.findById(id).orElse(null);
     }
 
