@@ -1,4 +1,4 @@
-package com.senai.projeto_escola.application.service;
+package com.senai.projeto_escola.Application.Service;
 
 import com.senai.projeto_escola.Domain.Entity.Curso;
 import com.senai.projeto_escola.Domain.Repository.CursoRepository;

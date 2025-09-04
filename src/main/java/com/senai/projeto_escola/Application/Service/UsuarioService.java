@@ -1,4 +1,4 @@
-package com.senai.projeto_escola.application.service;
+package com.senai.projeto_escola.Application.Service;
 import com.senai.projeto_escola.Domain.Entity.Usuario;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

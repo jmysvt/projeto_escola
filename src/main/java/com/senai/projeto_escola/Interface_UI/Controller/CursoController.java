@@ -1,6 +1,6 @@
 package com.senai.projeto_escola.Interface_UI.Controller;
 import com.senai.projeto_escola.Domain.Entity.Curso;
-import com.senai.projeto_escola.application.service.CursoService;
+import com.senai.projeto_escola.Application.Service.CursoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

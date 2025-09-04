@@ -1,8 +1,7 @@
 package com.senai.projeto_escola.Interface_UI.Controller;
 
-import com.senai.projeto_escola.Domain.Entity.Curso;
-import com.senai.projeto_escola.Domain.Entity.Professor;
-import com.senai.projeto_escola.application.service.ProfessorService;
+import com.senai.projeto_escola.Application.DTO.ProfessorDTO;
+import com.senai.projeto_escola.Application.Service.ProfessorService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -11,30 +10,33 @@ import java.util.List;
 @RestController
 @RequestMapping("/professor")
 public class ProfessorController {
+
     @Autowired
-    ProfessorService professorService;
+    private ProfessorService professorService;
 
     @GetMapping
-    public List<Professor> listarProfessores(){
+    public List<ProfessorDTO> listarProfessores() {
         return professorService.listarProfessores();
     }
 
     @GetMapping("/{id}")
-    public Professor buscarProfessor(@PathVariable String id){
-        return professorService.bucarProfessorPorId(id);
+    public ProfessorDTO buscarProfessor(@PathVariable String id) {
+        return professorService.buscarProfessorPorId(id);
     }
 
     @PostMapping
-    public Professor salvarProfessor(@RequestBody Professor professor){
-        return professorService.salvarProfessor (professor);
+    public ProfessorDTO salvarProfessor(@RequestBody ProfessorDTO professorDTO) {
+        return professorService.salvarProfessor(professorDTO);
     }
 
     @PutMapping("/{id}")
-    public Professor editarProfessor(@PathVariable String id ,@RequestBody Professor professor){
-        return professorService.atualizarProfessor(id,professor);
+    public ProfessorDTO editarProfessor(@PathVariable String id, @RequestBody ProfessorDTO professorDTO) {
+        return professorService.atualizarProfessor(id, professorDTO);
     }
+
     @DeleteMapping("/{id}")
-    public void deletarProfessor(@PathVariable String id){
-        professorService.deletarProfessor (id);
+    public void deletarProfessor(@PathVariable String id) {
+        professorService.deletarProfessor(id);
     }
 }
+

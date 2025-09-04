@@ -16,9 +16,8 @@ public class Aluno extends Usuario {
 
     @ManyToOne
     @NotBlank(message = "O campo curso não pode estar vazio")
-    @Column(nullable = false, length = 15)
     @JoinColumn(name = "curso_id")
-    private String curso;
+    private Curso curso;
 
 
 
