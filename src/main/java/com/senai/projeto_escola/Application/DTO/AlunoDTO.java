@@ -6,7 +6,8 @@ public record AlunoDTO (
     String nome,
     int cpf,
     String idCurso,
-    String turma
+    String turma,
+    String id
 ){
     public static AlunoDTO fromEntity(Aluno aluno){
         if(aluno ==null) return null;
@@ -14,7 +15,8 @@ public record AlunoDTO (
                 aluno.getNome(),
                 aluno.getCpf(),
                 aluno.getCurso() !=null ? aluno.getCurso().getId() : null ,
-                aluno.getTurma()
+                aluno.getTurma(),
+                aluno.getId()
         );
     }
 
